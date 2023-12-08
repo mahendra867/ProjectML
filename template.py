@@ -3,7 +3,7 @@ from pathlib import Path
 import logging # i want ot see my log in the terminal thats why this log is need 
 logging.basicConfig(level=logging.INFO,format='[%(asctime)s]: %(message)s:') # here iam initilizing one log string which it display the logg in the terminal like information logg level in format as per the time we exectue the code  w.r.t its message if code contain errors it returns the message error 
 
-project_name='PROJECTML' # this is the project name which i have given as 'mlproject_with_mlflow', usually we create one folder called src inside that src folder it will create 'mlproject_with_mlflow' inside this folder we all create all of the components 
+project_name='PROJECTML' # this is the project name which i have given as 'PROJECTML', usually we create one folder called src inside that src folder it will create 'mlproject_with_mlflow' inside this folder we all create all of the components 
 
 
 # here i have taken one list which it contain the list of files or records 
