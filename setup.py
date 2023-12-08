@@ -6,9 +6,9 @@ with open("README.md", "r", encoding="utf-8") as f:
 
 __version__ = "0.0.0"
 
-REPO_NAME = "machine-learning-Project-with-MLflow"
+REPO_NAME = "ProjectML_with_MLFlow" # here give the git hub main project repositotry name 
 AUTHOR_USER_NAME = "mahendra"
-SRC_REPO = "mlProject_with_mlflow"
+SRC_REPO = "PROJECTML" # give the name  which is present under the src  
 AUTHOR_EMAIL = "mahendramahesh2001@gmail.com"
 
 
