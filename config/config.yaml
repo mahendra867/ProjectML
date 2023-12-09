@@ -3,6 +3,6 @@ artifacts_root: artifacts # so basically when we are working excuting the traini
 
 data_ingestion: # here iam defining the data_ingestion related configuration
   root_dir: artifacts/data_ingestion  # here iam creating one data_ingestion folder inside the artifacts
-  source_URL: https://github.com/mahendra867/random_datasets/blob/main/winequality-data.zip  # this is my data downloaded URL  by this if we past the URL in the google kaggle winequality dataset get downloaded
+  source_URL: https://github.com/entbappy/Branching-tutorial/raw/master/winequality-data.zip  # this is my data downloaded URL  by this if we past the URL in the google kaggle winequality dataset get downloaded
   local_data_file: artifacts/data_ingestion/data.zip # when the above data which is present in the line get downloaded it do save inside the local_data_file with name of data.zip
   unzip_dir: artifacts/data_ingestion # again iam unzipping the data file and sending it into data_ingestion
