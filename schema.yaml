@@ -1,1 +1,19 @@
-key: value
+# this is called Schema.yaml file which it contains how many columns and it w.r.t data_types and the column names are present inside our dataset 
+COLUMNS:
+  fixed acidity: float64
+  volatile acidity: float64
+  citric acid: float64
+  residual sugar: float64
+  chlorides: float64
+  free sulfur dioxide: float64
+  total sulfur dioxide: float64
+  density: float64
+  pH: float64
+  sulphates: float64
+  alcohol: float64
+  quality: int64
+
+
+TARGET_COLUMN:
+  name: quality
+  
