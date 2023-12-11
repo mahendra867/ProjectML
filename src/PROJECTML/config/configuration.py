@@ -1,8 +1,8 @@
 from PROJECTML.constants import * # here iam importing everthing which is present in the constants->__init__.py file into inside the data_ingestion.ipynb
 from PROJECTML.utils.common import read_yaml, create_directories # here iam importing the read_yaml, create_directories which are presenting inside the utils,common files into PROJECTML in which the file is data_ingestion.ipynb 
-from PROJECTML.entity.config_entity import DataIngestionConfig,DataValidationConfig,DataTransformationConfig
+from PROJECTML.entity.config_entity import DataIngestionConfig,DataValidationConfig,DataTransformationConfig,ModelTrainerConfig
 
-class ConfigurationManager:  # here iam creating class called ConfigurationManager
+class ConfigurationManager:  # here iam creating class called ConfigurationManager , this template we use for every stage like data_ingestion,data_validation,data_transformation, model trainer .. etc
     def __init__( # inisde this class iam reading all the yaml files which iam calling it from constants->__init__.py file and iam mentioning inside the class varaiable 
         self,
         config_filepath = CONFIG_FILE_PATH,
@@ -65,6 +65,29 @@ class ConfigurationManager:  # here iam creating class called ConfigurationManag
         )
 
         return data_transformation_config
+    
+
+
+    # this is part of code for the Model trainerConfig which helps us to return the configuration
+    def get_model_trainer_config(self) -> ModelTrainerConfig:
+        config = self.config.model_trainer   # here iam reading the schema, params 
+        params = self.params.ElasticNet
+        schema =  self.schema.TARGET_COLUMN
+
+        create_directories([config.root_dir])
+
+        model_trainer_config = ModelTrainerConfig(
+            root_dir=config.root_dir,
+            train_data_path = config.train_data_path,
+            test_data_path = config.test_data_path,
+            model_name = config.model_name,
+            alpha = params.alpha,    # here from params iam taking the alpha l1_ratio
+            l1_ratio = params.l1_ratio, 
+            target_column = schema.name # here from schema iam taking the name which i will return through target_column
+            
+        )
+
+        return model_trainer_config # here iam returning all variables from the configuration 
     
 
 
