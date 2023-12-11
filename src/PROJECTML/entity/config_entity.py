@@ -1,4 +1,5 @@
 # This is called the entity 
+# lets prepare the entity here , and if i open the config.yaml file where i can find the root_dir,status_file,unzip_data the same i do find in the class iside the DataValiadationConfig
 from dataclasses import dataclass # here i imported the dataclass from the dataclasses
 from pathlib import Path  # here i imported path from pathlib
 
@@ -13,9 +14,6 @@ class DataIngestionConfig:  # here i have created a class and named as DataInges
 
 
 
-# lets prepare the entity here , and if i open the config.yaml file where i can find the root_dir,status_file,unzip_data the same i do find in the class iside the DataValiadationConfig
-from dataclasses import dataclass
-from pathlib import Path
 
 @dataclass(frozen=True)
 class DataValidationConfig:
@@ -23,3 +21,16 @@ class DataValidationConfig:
     STATUS_FILE: str
     unzip_data_dir: Path
     all_schema: dict # here all_Schema just read all the data and install inside the all_schema varaible as a dictionary formate
+
+
+
+
+
+@dataclass(frozen=True)
+class DataTransformationConfig:
+    root_dir: Path  # these are variables which are present inside the config.yaml file data_transformation code part and here iam mentioning inside the entity of the class
+    data_path: Path
+
+
+
+

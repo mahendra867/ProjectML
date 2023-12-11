@@ -1,6 +1,6 @@
 from PROJECTML.constants import * # here iam importing everthing which is present in the constants->__init__.py file into inside the data_ingestion.ipynb
 from PROJECTML.utils.common import read_yaml, create_directories # here iam importing the read_yaml, create_directories which are presenting inside the utils,common files into PROJECTML in which the file is data_ingestion.ipynb 
-from PROJECTML.entity.config_entity import DataIngestionConfig,DataValidationConfig
+from PROJECTML.entity.config_entity import DataIngestionConfig,DataValidationConfig,DataTransformationConfig
 
 class ConfigurationManager:  # here iam creating class called ConfigurationManager
     def __init__( # inisde this class iam reading all the yaml files which iam calling it from constants->__init__.py file and iam mentioning inside the class varaiable 
@@ -49,6 +49,22 @@ class ConfigurationManager:  # here iam creating class called ConfigurationManag
         )
 
         return data_validation_config
+    
+
+
+
+    # # only this part get changes in every step, only defining the get_data_transformation_config get changes according to which step we are performing like 01_data_ingestion,02_data_validation  
+    def get_data_transformation_config(self) -> DataTransformationConfig:
+        config = self.config.data_transformation
+
+        create_directories([config.root_dir])
+
+        data_transformation_config = DataTransformationConfig(
+            root_dir=config.root_dir,  # here iam returning these 2 varaibles by using this code 
+            data_path=config.data_path,
+        )
+
+        return data_transformation_config
     
 
 
