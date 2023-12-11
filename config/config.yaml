@@ -3,7 +3,7 @@ artifacts_root: artifacts # so basically when we are working excuting the traini
 
 data_ingestion: # here iam defining the data_ingestion related configuration
   root_dir: artifacts/data_ingestion  # here iam creating one data_ingestion folder inside the artifacts
-  source_URL: https://github.com/entbappy/Branching-tutorial/raw/master/winequality-data.zip  # this is my data downloaded URL  by this if we past the URL in the google kaggle winequality dataset get downloaded
+  source_URL: https://github.com/mahendra867/random_datasets/raw/main/winequality-data.zip  # this is my data downloaded URL  by this if we past the URL in the google kaggle winequality dataset get downloaded
   local_data_file: artifacts/data_ingestion/data.zip # when the above data which is present in the line get downloaded it do save inside the local_data_file with name of data.zip
   unzip_dir: artifacts/data_ingestion # again iam unzipping the data file and sending it into data_ingestion
 
@@ -29,3 +29,10 @@ model_trainer:
   test_data_path: artifacts/data_transformation/test.csv 
   model_name: model.joblib  # once the model got trained by the above train path our model will get saved inside the artifacts->model_trainer folder and we are saving our model in the formate of joblib rather than pickel formate because joblib is better than pickle formate
 
+
+# so this is my model_evaluation related configuration and creating 1 folder which is related to model_evaluation
+model_evaluation:
+  root_dir: artifacts/model_evaluation
+  test_data_path: artifacts/data_transformation/test.csv # here actually iam taking the test dataset which is available inside the data_transformation, actually i want to test my data by using the trained model
+  model_path: artifacts/model_trainer/model.joblib  # the trained model got inside this path
+  metric_file_name: artifacts/model_evaluation/metrics.json # and our model_evalution create one metrics.json file inside the provided path
