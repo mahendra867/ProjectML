@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/ProjectML/ProjectML_with_MLFlow/mlruns/0/9e336b9adc0a4f9f83a160bc98fb04f7/artifacts
+end_time: 1702559026107
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 9e336b9adc0a4f9f83a160bc98fb04f7
+run_name: respected-sow-673
+run_uuid: 9e336b9adc0a4f9f83a160bc98fb04f7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1702559018898
+status: 3
+tags: []
+user_id: mahen

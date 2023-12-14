@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/ProjectML/ProjectML_with_MLFlow/mlruns/0/e78543c89a8145e58934aa69adaffebb/artifacts
+end_time: 1702556726745
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: e78543c89a8145e58934aa69adaffebb
+run_name: agreeable-whale-114
+run_uuid: e78543c89a8145e58934aa69adaffebb
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1702556717038
+status: 3
+tags: []
+user_id: mahen
