@@ -1,4 +1,4 @@
 # Actually these are my parameters which users makes expermenting these paramater values till we get the best model by making comparision the paramters values by using ml flow graph
 ElasticNet: # here ELasticNet is our model name and this ElasticNet model needs parameters like alpha, l1_ratio thats why iam using these parameters , if we use random forest as our model we do use paramters which are related to random forest   
- alpha : 0.5  # these 2 are the parameters , so when we change the parameters that will reflect on the model trainer part
- l1_ratio : 0.7
+ alpha : 0.2 # these 2 are the parameters , so when we change the parameters that will reflect on the model trainer part
+ l1_ratio : 0.1

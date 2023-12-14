@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/ProjectML/ProjectML_with_MLFlow/mlruns/0/fb79dd2796ca4aa79b1fcde989e7f010/artifacts
+end_time: 1702549815349
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: fb79dd2796ca4aa79b1fcde989e7f010
+run_name: abrasive-vole-893
+run_uuid: fb79dd2796ca4aa79b1fcde989e7f010
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1702549802896
+status: 3
+tags: []
+user_id: mahen

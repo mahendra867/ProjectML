@@ -43,3 +43,17 @@ class ModelTrainerConfig:
     alpha: float   # here i have added some more variables like alpha, l1_ratio which these both we define inside the param.yaml file
     l1_ratio: float
     target_column: str  # this target column is present inside the Schema.yaml file which it tells us the quality of the Wine based on the value it returns 
+
+
+
+
+
+@dataclass(frozen=True)
+class ModelEvaluationConfig:
+    root_dir: Path  # this root_dir,test_data_path,model_path,metric_file_name are the variables takes from the model_evaluation configuration code part of config.yaml file 
+    test_data_path: Path
+    model_path: Path
+    all_params: dict # these all params is available inside the params.yaml file which it reads all the parameters 
+    metric_file_name: Path
+    target_column: str # this target column takes from schema.yaml file 
+    mlflow_uri: str # this mlflow uri iagain write it down once again inside mlflow URI section 

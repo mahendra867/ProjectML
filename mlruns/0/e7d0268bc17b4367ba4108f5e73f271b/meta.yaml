@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/ProjectML/ProjectML_with_MLFlow/mlruns/0/e7d0268bc17b4367ba4108f5e73f271b/artifacts
+end_time: 1702550394865
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: e7d0268bc17b4367ba4108f5e73f271b
+run_name: aged-rat-761
+run_uuid: e7d0268bc17b4367ba4108f5e73f271b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1702550389278
+status: 3
+tags: []
+user_id: mahen

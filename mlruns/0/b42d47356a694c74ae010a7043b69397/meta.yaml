@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/ProjectML/ProjectML_with_MLFlow/mlruns/0/b42d47356a694c74ae010a7043b69397/artifacts
+end_time: 1702537310182
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: b42d47356a694c74ae010a7043b69397
+run_name: loud-stag-780
+run_uuid: b42d47356a694c74ae010a7043b69397
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1702537305834
+status: 3
+tags: []
+user_id: mahen

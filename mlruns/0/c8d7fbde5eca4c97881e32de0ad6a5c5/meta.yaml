@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/ProjectML/ProjectML_with_MLFlow/mlruns/0/c8d7fbde5eca4c97881e32de0ad6a5c5/artifacts
+end_time: 1702535336316
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c8d7fbde5eca4c97881e32de0ad6a5c5
+run_name: upbeat-calf-182
+run_uuid: c8d7fbde5eca4c97881e32de0ad6a5c5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1702535330544
+status: 3
+tags: []
+user_id: mahen

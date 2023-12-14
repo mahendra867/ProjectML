@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/ProjectML/ProjectML_with_MLFlow/mlruns/0/d805924511eb4445bf6cf18cb2f50e6b/artifacts
+end_time: 1702535670133
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: d805924511eb4445bf6cf18cb2f50e6b
+run_name: tasteful-wasp-716
+run_uuid: d805924511eb4445bf6cf18cb2f50e6b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1702535665782
+status: 3
+tags: []
+user_id: mahen

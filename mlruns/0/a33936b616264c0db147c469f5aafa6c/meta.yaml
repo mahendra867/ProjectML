@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/ProjectML/ProjectML_with_MLFlow/mlruns/0/a33936b616264c0db147c469f5aafa6c/artifacts
+end_time: 1702535546915
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: a33936b616264c0db147c469f5aafa6c
+run_name: rebellious-cat-258
+run_uuid: a33936b616264c0db147c469f5aafa6c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1702535539406
+status: 3
+tags: []
+user_id: mahen

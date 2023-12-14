@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/ProjectML/ProjectML_with_MLFlow/mlruns/0/57e999cf7a154fd1a8ea0d9d4d9a3298/artifacts
+end_time: 1702535743366
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 57e999cf7a154fd1a8ea0d9d4d9a3298
+run_name: gifted-bear-793
+run_uuid: 57e999cf7a154fd1a8ea0d9d4d9a3298
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1702535739178
+status: 3
+tags: []
+user_id: mahen

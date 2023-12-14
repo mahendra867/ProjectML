@@ -1,6 +1,6 @@
 from PROJECTML.constants import * # here iam importing everthing which is present in the constants->__init__.py file into inside the data_ingestion.ipynb
-from PROJECTML.utils.common import read_yaml, create_directories # here iam importing the read_yaml, create_directories which are presenting inside the utils,common files into PROJECTML in which the file is data_ingestion.ipynb 
-from PROJECTML.entity.config_entity import DataIngestionConfig,DataValidationConfig,DataTransformationConfig,ModelTrainerConfig
+from PROJECTML.utils.common import read_yaml, create_directories,save_json # here iam importing the read_yaml, create_directories which are presenting inside the utils,common files into PROJECTML in which the file is data_ingestion.ipynb 
+from PROJECTML.entity.config_entity import DataIngestionConfig,DataValidationConfig,DataTransformationConfig,ModelTrainerConfig,ModelEvaluationConfig
 
 class ConfigurationManager:  # here iam creating class called ConfigurationManager , this template we use for every stage like data_ingestion,data_validation,data_transformation, model trainer .. etc
     def __init__( # inisde this class iam reading all the yaml files which iam calling it from constants->__init__.py file and iam mentioning inside the class varaiable 
@@ -91,6 +91,26 @@ class ConfigurationManager:  # here iam creating class called ConfigurationManag
     
 
 
+# only this part of code get changes her actually iam defining a get_model_evaluation_config
+    def get_model_evaluation_config(self) -> ModelEvaluationConfig:
+        config = self.config.model_evaluation# here our model ElasticNet reading all params , Target_column of schema 
+        params = self.params.ElasticNet
+        schema =  self.schema.TARGET_COLUMN
+
+        create_directories([config.root_dir])
+
+        model_evaluation_config = ModelEvaluationConfig(
+            root_dir=config.root_dir,
+            test_data_path=config.test_data_path,
+            model_path = config.model_path,
+            all_params=params, # here iam saving all the parameters which i do experment while getting to know at which parameters our trained model which is ElastcNet is doing well
+            metric_file_name = config.metric_file_name,
+            target_column = schema.name,
+            mlflow_uri="https://dagshub.com/mahendra867/ProjectML_with_MLFlow.mlflow", # here i have setted the mlflow URI
+           
+        )
+
+        return model_evaluation_config # so which ever the varaibles we initilized inside the entity those are all getting returned 
 
 
 
