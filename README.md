@@ -26,19 +26,6 @@ Output variable (based on sensory data):\
 12 - quality (score between 0 and 10)
 
 
-## WorkFlows
-
-1. Update config.yam1
-2. Update schema.yaml
-3. Update params.yaml
-4. Update the entity
-5. Update the configuration manager in src config
-6. Update the components
-7. Update the pipeline
-8. Update the [main.py](http://main.py/)
-9. Update the [app.py](http://app.py/)
-
-
 ## Approach 
 
 
@@ -73,6 +60,21 @@ train: This method reads the training and testing data, separates the features a
 Lastly, in the model evaluation stage, I assess the performance of the trained model. The ModelEvaluation component, with the method log_into_mlflow, handles this evaluation:
 
 log_into_mlflow: Using mlflow, the method loads the test dataset and the trained model, makes predictions, and calculates evaluation metrics such as RMSE, MAE, and R2. These metrics are logged and saved, and the trained model is registered with mlflow for further tracking and deployment.
+
+
+## WorkFlows
+
+1. Update config.yam1
+2. Update schema.yaml
+3. Update params.yaml
+4. Update the entity
+5. Update the configuration manager in src config
+6. Update the components
+7. Update the pipeline
+8. Update the [main.py](http://main.py/)
+9. Update the [app.py](http://app.py/)
+
+
 
 
 # How to run?
