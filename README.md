@@ -39,6 +39,38 @@ Output variable (based on sensory data):\
 9. Update the [app.py](http://app.py/)
 
 
+## Approach 
+
+
+Data Ingestion:
+
+In the data ingestion stage, I, as the developer, first ensure that the necessary libraries are imported for component updates. The DataIngestion class is then defined to handle the ingestion process based on the provided configuration. Within this class, two main methods are implemented:
+
+download_file: This method downloads the data from a specified URL using the urllib library and saves it locally. It checks if the file already exists and logs its size accordingly.
+
+extract_zip_file: Here, the downloaded zip file is extracted into a designated directory using the zipfile library. This ensures that the data is ready for further processing.
+
+Data Validation:
+
+In the data validation stage, I create the DataValidation component to ensure the integrity and completeness of the ingested data. The class DataValidation contains the following key method:
+
+validate_all_columns: This method reads the unzipped data and compares its columns against a predefined schema. If all columns match the schema, it returns a validation status of True; otherwise, it returns False. The status is then written into a text file for reference.
+Data Transformation:
+
+In this stage, I focus on transforming the data to make it suitable for modeling. The DataTransformation component, primarily featuring the train_test_spliting method, handles this process.
+
+train_test_spliting: Using train_test_split from sklearn, the method splits the data into training and testing sets. It saves these splits as CSV files for future use.
+Model Training:
+
+Moving forward, in the model training stage, I develop the ModelTrainer component to train a predictive model using the prepared data. The class ModelTrainer incorporates:
+
+train: This method reads the training and testing data, separates the features and target variable, and initializes an ElasticNet model. The model is trained on the training data and saved using joblib.
+Model Evaluation:
+
+Lastly, in the model evaluation stage, I assess the performance of the trained model. The ModelEvaluation component, with the method log_into_mlflow, handles this evaluation:
+
+log_into_mlflow: Using mlflow, the method loads the test dataset and the trained model, makes predictions, and calculates evaluation metrics such as RMSE, MAE, and R2. These metrics are logged and saved, and the trained model is registered with mlflow for further tracking and deployment.
+
 
 # How to run?
 ### STEPS:
